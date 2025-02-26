@@ -1,8 +1,3 @@
-
-Problem-solving patterns are general, reusable solutions to common algorithmic challenges. By recognizing these patterns, developers can more quickly identify efficient approaches to solve new problems. Many coding interview questions and algorithm tasks can be cracked by applying one of these patterns.
-
-This guide will cover several essential problem-solving patterns in C#, complete with explanations, diagrams, and example code. The patterns discussed include techniques for sliding windows, two-pointer approaches, fast/slow iterators, interval merging, cyclic sorting, in-place linked list operations, tree traversals, heap usage, backtracking, binary search variants, bit manipulation, greedy selection, dynamic programming, graph ordering, and more. Each section stands on its own, so you can refer to individual patterns as needed.
-
 ## 1. Sliding Window Pattern
 
 The **Sliding Window** pattern is used to efficiently compute something over every subset of a sequence of fixed size or that meets certain conditions, by maintaining a "window" that slides through the data. It's useful for problems like finding the maximum or minimum sum of a subarray of length _k_, or any problem where you need to consider contiguous sequences in an array or string. Instead of recomputing from scratch for each possible subsequence, the sliding window pattern reuses computations from the previous window, achieving a significant performance boost (often reducing complexity from O(n·k) to O(n) for a window size _k_).
@@ -367,7 +362,7 @@ A common approach is iterative: start with an initial list containing the empty 
 ```mermaid
 %%{init: {'theme': 'dark'}}%%
 flowchart LR
-    S0[[]] --> S1[[], [1]] --> S2[[], [1], [2], [1,2]]
+    S0["[]"] --> S1["[], [1]"] --> S2["[], [1], [2], [1,2]"]
 ```
 
 _In the diagram, starting from the empty set `[]`, adding the number 1 yields subsets `[]` and `[1]`. Then adding 2 to all existing subsets yields `[]`, `[1]` (the old ones) and `[2]`, `[1,2]` (the new ones with 2)._
@@ -450,7 +445,7 @@ For instance, to find the single unique number in an array where every other num
 
 ```mermaid
 %%{init: {'theme': 'dark'}}%%
-flowchart LR
+flowchart 
     subgraph Array
         a((2)):::pair --> b((1)):::pair --> c((4)):::unique --> d((1)):::pair --> e((2)):::pair
     end
